@@ -3,7 +3,9 @@ package ru.practicum.user;
 import java.util.List;
 
 interface UserService {
-    List<User> getAllUsers();
+    List<UserDto> getAllUsers();
 
-    User saveUser(User user);
+    UserDto saveUser(UserDto userDto);
+
+    List<UserShortWithIP> getUsersEmailWithIp(String emailSearch);
 }
